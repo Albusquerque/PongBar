@@ -1,0 +1,10 @@
+{
+  "name": "PongBar",
+  "author": "Albus Querque",
+  "flags": ["root"],
+  "api_version": 1,
+  "publish": {
+    "tags": ["game", "root"],
+    "description": "A 17-LED Pong game for the official Steam Machine light bar."
+  }
+}

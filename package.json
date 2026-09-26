@@ -1,0 +1,26 @@
+{
+  "name": "pongbar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone Pong game for the Steam Machine light bar",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "rollup -c -w",
+    "package": "python3 scripts/package_plugin.py"
+  },
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@decky/rollup": "^1.0.2",
+    "@decky/ui": "^4.11.0",
+    "@types/react": "19.1.1",
+    "@types/react-dom": "19.1.1",
+    "rollup": "^4.53.3",
+    "rollup-plugin-import-assets": "^1.1.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@decky/api": "^1.1.3",
+    "tslib": "^2.7.0"
+  }
+}
