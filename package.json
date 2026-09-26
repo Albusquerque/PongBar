@@ -2,7 +2,7 @@
   "name": "pongbar",
   "version": "0.1.0",
   "private": true,
-  "description": "Standalone Pong game for the Steam Machine light bar",
+  "description": "Standalone 1D Pong game for the Steam Machine 17 LED light bar",
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",

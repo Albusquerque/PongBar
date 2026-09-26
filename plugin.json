@@ -4,7 +4,7 @@
   "flags": ["root"],
   "api_version": 1,
   "publish": {
-    "tags": ["game", "root"],
-    "description": "A 17-LED Pong game for the official Steam Machine light bar."
+    "tags": ["game", "pong", "1d-pong", "root"],
+    "description": "A standalone 1D Pong game played on the official Steam Machine's 17 LED light bar."
   }
 }

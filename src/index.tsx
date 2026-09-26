@@ -30,14 +30,14 @@ function Button({ className = "", onGamepadFocus, onGamepadBlur, ...props }: But
 function Logo() {
   return <div className="pb-brand"><div className="pb-brand-icon" aria-hidden="true">
     {Array.from({ length: 20 }, (_, index) => <i key={index} />)}
-  </div><div><h1>Pong<span>Bar</span></h1><p className="pb-subtitle">17 LED ARCADE · VERSION 0.1.0</p></div></div>;
+  </div><div><h1>Pong<span>Bar</span></h1><p className="pb-subtitle">1D PONG · 17 LED ARCADE · VERSION 0.1.0</p></div></div>;
 }
 
 function Rail({ status }: { status: PongStatus }) {
   return <div className="pb-rail-panel">
     <div className="pb-rail-header"><div><span>Steam Machine light bar</span><strong>17 LEDs · live signal</strong></div>
       <div className="pb-rail-pattern">{status.pattern || "Rally in progress"}</div></div>
-    <div className="pb-rail" role="img" aria-label={`PongBar light bar, ${status.pattern || status.phase}`}>
+    <div className="pb-rail" role="img" aria-label={`PongBar 1D Pong light bar, ${status.pattern || status.phase}`}>
       {status.colors.map((color, index) => {
         const lit = color.some((channel) => channel > 12);
         const rgb = `rgb(${color.join(",")})`;
@@ -205,10 +205,10 @@ function App() {
       </div></header><div className="pb-topline" />
       {!status ? <div className="pb-card">{error || "Loading PongBar…"}</div> : <>
       <main className="pb-main">
-        <section className="pb-stage" aria-label="PongBar playfield">
-          <div className="pb-stage-heading"><div><span className="pb-kicker">THE GAME ON THE LIGHT BAR</span>
-            <h2>One ball. Seventeen lights.</h2>
-            <p>Return the white ball at the cyan end. Every five returns, the colour changes and the ball speeds up.</p>
+        <section className="pb-stage" aria-label="PongBar 1D Pong playfield">
+          <div className="pb-stage-heading"><div><span className="pb-kicker">1D PONG ON THE LIGHT BAR</span>
+            <h2>One dimension. Seventeen lights.</h2>
+            <p>Return the white ball at the cyan end. This is Pong compressed into one dimension: every five returns, the colour changes and the ball speeds up.</p>
           </div><span className={`pb-state-chip${status.hardware_owner === "other" ? " pb-alert" : ""}`}>
             <i />{status.preview ? "LOOPING PREVIEW" : status.paused ? "PAUSED" :
               status.active ? "GAME IN PROGRESS" : status.phase === "finished" ? "GAME OVER" : "READY TO PLAY"}
@@ -407,10 +407,10 @@ function QuickPanel() {
     const timer = window.setInterval(update, 1000);
     return () => { alive = false; window.clearInterval(timer); };
   }, []);
-  return <PanelSection title="PongBar · 0.1.0">
+  return <PanelSection title="PongBar · 1D Pong · 0.1.0">
     <PanelSectionRow><div style={{ fontSize: ".83em", lineHeight: 1.45 }}>
       {status?.active ? `${status.mode} game · level ${status.level} · ${status.returns} returns` :
-        "Pong on the Steam Machine's 17 LEDs. Solo, duel, pinball score and light sequences."}
+        "1D Pong on the Steam Machine's 17 LEDs. Solo, duel, pinball score and light sequences."}
     </div></PanelSectionRow>
     <PanelSectionRow><ButtonItem label="Open full-screen PongBar"
       onClick={() => { Navigation.CloseSideMenus(); Navigation.Navigate("/pongbar/play"); }}>

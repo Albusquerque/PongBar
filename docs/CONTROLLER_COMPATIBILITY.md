@@ -1,6 +1,6 @@
 # PongBar 0.1.0: controllers and haptics
 
-This document separates documented API behavior, what PongBar implements, and what still requires a physical Steam Machine check.
+PongBar is a 1D Pong game played across the Steam Machine's 17 LED light bar. This document separates documented API behavior, what PongBar implements, and what still requires a physical Steam Machine check.
 
 ## Input paths
 

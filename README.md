@@ -1,11 +1,13 @@
-# PongBar
+# PongBar: 1D Pong on 17 LEDs
 
-PongBar is a standalone Decky Loader game built for the official Steam
-Machine's 17 LED light bar. The physical strip is the playfield, while a dense
-64 x 28 dot matrix on screen shows the score, lives, levels and feedback.
+PongBar is a standalone 1D Pong game for Decky Loader, built for the official
+Steam Machine's 17 LED light bar. The physical strip is the one-dimensional
+playfield, while a dense 64 x 28 dot matrix on screen shows the score, lives,
+levels and feedback.
 
 ## Features
 
+- True 1D Pong played across a line of 17 physical LEDs.
 - Solo mode with three lives and a saved best streak.
 - Two player duel mode, first to five points.
 - Five colour and speed levels.

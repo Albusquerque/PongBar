@@ -42,7 +42,7 @@ function cueLabel(status: PongStatus, cueAge: number) {
   if (status.cue === "joker" && cueAge < 900) return `EARLY · ${status.jokers?.[status.cue_side] ?? 0} JOKERS`;
   if (status.cue === "point" && (status.preview || cueAge < 1800)) return "POINT";
   if (status.phase === "ready") return "GET READY";
-  return status.mode ? "SCORE" : "PONGBAR";
+  return status.mode ? "SCORE" : "1D PONG";
 }
 
 function paint(canvas: HTMLCanvasElement, status: PongStatus, now: number, cueAge: number) {
@@ -71,7 +71,7 @@ function paint(canvas: HTMLCanvasElement, status: PongStatus, now: number, cueAg
     (status.phase === "ready" && cueAge < 1250);
   if (showBrand) {
     const reveal = status.phase === "ready" ? Math.min(64, Math.floor(cueAge / 350 * 64)) : 64;
-    "PONGBAR".split("").forEach((letter, index) => {
+    "1D PONG".split("").forEach((letter, index) => {
       const color = index < 4 ? "#8deced" : index === 5 ? "#ffe19a" : "#ff91bc";
       WORD[letter as keyof typeof WORD].forEach((row, y) => {
         for (let col = 0; col < 4; col++) if (row[col] === "1") {
@@ -157,7 +157,7 @@ export function Matrix({ status }: { status: PongStatus }) {
   return <div className="pb-matrix-frame">
     <div className="pb-matrix-head"><span>PINBALL MATRIX · 64 × 28</span><strong>{cueLabel(status, status.cue_age_ms)}</strong></div>
     <canvas ref={canvasRef} width={640} height={280} role="img"
-      aria-label={`PongBar matrix: ${label}. Level ${status.level}.`} />
+      aria-label={`PongBar 1D Pong matrix: ${label}. Level ${status.level}.`} />
     <div className="pb-matrix-foot"><span>CYAN · LEFT</span><span>WHITE · BALL</span><span>PINK · RIGHT</span></div>
   </div>;
 }

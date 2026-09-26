@@ -1,4 +1,4 @@
-"""PongBar rules and the 17-LED frames shared by play and previews."""
+"""PongBar 1D Pong rules and the 17 LED frames shared by play and previews."""
 
 from __future__ import annotations
 

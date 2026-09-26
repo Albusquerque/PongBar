@@ -1,4 +1,4 @@
-"""Decky entry point for the standalone PongBar game."""
+"""Decky entry point for the standalone PongBar 1D Pong game."""
 
 from __future__ import annotations
 

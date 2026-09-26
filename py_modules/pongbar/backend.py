@@ -1,4 +1,4 @@
-"""Thread-safe PongBar session, settings, LED ownership and diagnostics."""
+"""Thread-safe 1D Pong session, settings, LED ownership and diagnostics."""
 
 from __future__ import annotations
 

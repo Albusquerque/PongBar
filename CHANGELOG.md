@@ -2,7 +2,7 @@
 
 ## 0.1.0 - 2026-09-26
 
-- Release PongBar as a standalone Decky Loader game.
+- Release PongBar as a standalone 1D Pong game for Decky Loader.
 - Add solo and two player modes across five colour and speed levels.
 - Add three early press jokers per player, saved solo streaks and four looping
   LED celebration previews.
